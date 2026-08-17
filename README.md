@@ -1,3 +1,5 @@
+<img width="1920" height="857" alt="deploy" src="https://github.com/user-attachments/assets/cc1f71de-93cd-4240-8ce6-1a7c737df92e" />
+
 # ClaimJudge – AI-Powered Decentralized Claim & Dispute Resolver
 
 **An advanced Intelligent Contract on GenLayer that uses AI consensus to fairly judge real-world claims and disputes.**
