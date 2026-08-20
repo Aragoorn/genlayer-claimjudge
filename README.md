@@ -1,71 +1,82 @@
-<img width="1920" height="857" alt="deploy" src="https://github.com/user-attachments/assets/cc1f71de-93cd-4240-8ce6-1a7c737df92e" />
-
+<img width="1920" height="881" alt="Screenshot (2777)" src="https://github.com/user-attachments/assets/0d50a60f-3960-4857-a809-04bce50f4eea" />
+<img width="1920" height="854" alt="Screenshot (2776)" src="https://github.com/user-attachments/assets/596b41c7-faed-4360-af91-821e607f8bd0" />
+<img width="1920" height="884" alt="Screenshot (2781)" src="https://github.com/user-attachments/assets/fcf67771-e0c3-4503-9741-7da9b95dfd10" />
+<img width="1920" height="878" alt="Screenshot (2780)" src="https://github.com/user-attachments/assets/f2f489d8-ef21-4181-a2ef-df345ac75b0f" />
+<img width="1920" height="888" alt="Screenshot (2779)" src="https://github.com/user-attachments/assets/fff77032-0b1d-405f-b7cc-90b4e3c16326" />
+<img width="1920" height="869" alt="Screenshot (2778)" src="https://github.com/user-attachments/assets/d20d7157-9ee3-4fa0-a73e-4ec1a93d74e3" />
+<img width="1920" height="890" alt="Screenshot (2796)" src="https://github.com/user-attachments/assets/a1945e4e-1cf8-4786-8bd8-5495e386cb06" />
 # ClaimJudge – AI-Powered Decentralized Claim & Dispute Resolver
 
-**An advanced Intelligent Contract on GenLayer that uses AI consensus to fairly judge real-world claims and disputes.**
-
-Built for the GenLayer Builders Program – August 2026.
+**Final version – Fully compliant with steward feedback**
 
 ## Overview
 
-ClaimJudge demonstrates the core power of GenLayer as the **adjudication layer** for the agentic economy.  
-Anyone can submit a claim (freelance work, bounty completion, delivery disputes, etc.). The network reaches consensus using LLMs via the Equivalence Principle (`prompt_non_comparative`) and stores a transparent, on-chain judgment.
+ClaimJudge is an intelligent contract on GenLayer that enables anyone to create claims, submit evidence, receive an AI judgment, challenge the decision, and request a full reassessment.
+## contract address:0x8A8B387C84552863c077C3085dF719E6DA42d673
+http://explorer-studio.genlayer.com/address/0x8A8B387C84552863c077C3085dF719E6DA42d673
+https://explorer-studio.genlayer.com/tx/0x38c1fea49cb5c9aeeea1e16f7320ec65ae9d217041290d5d8d53cc76c431e14b
+https://explorer-studio.genlayer.com/tx/0xf9fab74f4827f03bfc4c891d85b89141212ede63e51d535dcb5b6164ac0bfe13
+https://explorer-studio.genlayer.com/tx/0xf830d907987c58994814400366ae9655e6f415a5f5aebafa0c32fd5222c77816
 
-### Key Features
-- Create claims with title, description and optional evidence
-- Add extra evidence after creation
-- AI resolution using GenLayer’s non-deterministic LLM consensus
-- Challenge existing resolutions
-- Full on-chain history + statistics
-- Clean, production-ready Python code with proper storage patterns
+## live demo 
+https://aesthetic-longma-6e391d.netlify.app/
 
-## Contract Address
-`0x112f563F4DE1d981f0538A456Ea58C81cF93B73C`
 
-## How to Use (GenLayer Studio)
+## Steward Feedback Compliance
 
-1. **create_claim(title, description, evidence_urls)**  
-   Creates a new claim and returns the claim_id.
+All requested improvements have been implemented and tested:
 
-2. **add_evidence(claim_id, extra_urls)** (optional)  
-   Adds more evidence to an open claim.
+### 1. Reassessment consumes challenge reason and prior verdict
+When `resolve_claim` is called after a challenge, the AI receives:
+- The previous decision
+- The full challenge reason
+- The latest evidence stored in the contract
 
-3. **resolve_claim(claim_id)**  
-   Triggers AI judgment. Uses `prompt_non_comparative` for reliable consensus.
+### 2. Reviewable decision history
+Every resolution (including reassessments) is permanently stored in `decision_history` and can be read via `get_history`.
 
-4. **challenge_resolution(claim_id, reason)**  
-   Allows anyone to formally challenge a decision.
+### 3. Updated evidence is always read from the contract
+The contract always reads the current `evidence_urls` from storage before making a judgment.
 
-### View Methods
-- `get_claim(claim_id)`
-- `get_resolution(claim_id)`
-- `get_challenge(claim_id)`
-- `get_claim_count()`
-- `get_resolved_count()`
-- `get_stats()`
+## Successful Test Flow (Verified on Studio)
 
-## Example Flow
-```text
-create_claim(
-  "Freelance website redesign completed",
-  "I fully completed the website redesign as agreed...",
-  ""
-)
-→ claim_id = 0
+1. **create_claim** → Claim #0 created
+2. **resolve_claim** → First decision: `VALID`
+3. **challenge_resolution** → Challenge submitted with detailed reason
+4. **resolve_claim** (again) → Reassessment performed
+5. **get_history** → Shows both decisions
+6. **get_resolution** → Confirms `is_reassessment: true` and includes challenge reason
 
-resolve_claim(0)
-→ AI returns VALID / PARTIALLY_VALID / INVALID with reasoning
+### Example Reassessment Result
+```json
+{
+  "decision": "VALID",
+  "is_reassessment": true,
+  "previous_decision": "VALID",
+  "challenge_reason": "The AI decision did not properly consider the police report...",
+  "reasoning": "AI consensus decided the claim is VALID. Reassessment considered challenge reason: ..."
+}
 
-Technical HighlightsUses gl.eq_principle.prompt_non_comparative for stable LLM consensus
-TreeMap storage with JSON serialization (best practice)
-Deterministic timestamps via transaction context
-Proper error handling and status management
-Fully typed and ready for production use
+### Main Functions
 
-Future MilestonesFrontend dApp
-Payable escrow integration
-Multi-party disputes
-Reputation system based on past judgments
+Function                      Description  
 
-Built with  for GenLayer
-This project showcases real adjudication use-cases that were previously impossible on traditional blockchains.
+create_claim                Create a new claim
+add_evidence                Add additional evidence
+resolve_claim               AI judgment (supports first resolve + reassessment)
+challenge_resolution        Challenge a resolution
+get_claim                   View claim details
+get_resolution              View latest resolution
+get_challenge               View challenge data
+get_history                 View full decision history
+get_stats                   Protocol statistics
+
+### How to Test
+Create a claim
+Resolve it
+Challenge it with a clear reason
+Resolve it again (reassessment)
+Check get_history and get_resolution
+
+Repository:
+https://github.com/Aragoorn/genlayer-claimjudge-dapp
