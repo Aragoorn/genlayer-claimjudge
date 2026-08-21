@@ -1,3 +1,5 @@
+<img width="948" height="901" alt="Screenshot (2804)" src="https://github.com/user-attachments/assets/1e4f37b4-352d-421a-bd75-c7c76e55a02b" />
+<img width="903" height="750" alt="Screenshot (2805)" src="https://github.com/user-attachments/assets/eee48706-a5f8-4916-816c-ab6c0adf4193" />
 <img width="1920" height="881" alt="Screenshot (2777)" src="https://github.com/user-attachments/assets/0d50a60f-3960-4857-a809-04bce50f4eea" />
 <img width="1920" height="854" alt="Screenshot (2776)" src="https://github.com/user-attachments/assets/596b41c7-faed-4360-af91-821e607f8bd0" />
 <img width="1920" height="884" alt="Screenshot (2781)" src="https://github.com/user-attachments/assets/fcf67771-e0c3-4503-9741-7da9b95dfd10" />
@@ -19,7 +21,7 @@ https://explorer-studio.genlayer.com/tx/0xf9fab74f4827f03bfc4c891d85b89141212ede
 https://explorer-studio.genlayer.com/tx/0xf830d907987c58994814400366ae9655e6f415a5f5aebafa0c32fd5222c77816
 
 ## live demo 
-https://aesthetic-longma-6e391d.netlify.app/
+https://jade-lamington-f9b630.netlify.app/
 
 
 ## Steward Feedback Compliance
