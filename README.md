@@ -68,4 +68,4 @@ Resolve it again (reassessment)
 Check get_history and get_resolution
 
 Repository:
-https://github.com/Aragoorn/genlayer-claimjudge-dapp
+https://github.com/Aragoorn/genlayer-claimjudge
