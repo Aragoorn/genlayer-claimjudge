@@ -1,7 +1,5 @@
 # ClaimJudge – AI-Powered Decentralized Claim & Dispute Resolver
 
-**Final version – Fully compliant with steward feedback**
-
 ## Overview
 
 ClaimJudge is an intelligent contract on GenLayer that enables anyone to create claims, submit evidence, receive an AI judgment, challenge the decision, and request a full reassessment.
