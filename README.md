@@ -1,12 +1,3 @@
-<img width="948" height="901" alt="Screenshot (2804)" src="https://github.com/user-attachments/assets/1e4f37b4-352d-421a-bd75-c7c76e55a02b" />
-<img width="903" height="750" alt="Screenshot (2805)" src="https://github.com/user-attachments/assets/eee48706-a5f8-4916-816c-ab6c0adf4193" />
-<img width="1920" height="881" alt="Screenshot (2777)" src="https://github.com/user-attachments/assets/0d50a60f-3960-4857-a809-04bce50f4eea" />
-<img width="1920" height="854" alt="Screenshot (2776)" src="https://github.com/user-attachments/assets/596b41c7-faed-4360-af91-821e607f8bd0" />
-<img width="1920" height="884" alt="Screenshot (2781)" src="https://github.com/user-attachments/assets/fcf67771-e0c3-4503-9741-7da9b95dfd10" />
-<img width="1920" height="878" alt="Screenshot (2780)" src="https://github.com/user-attachments/assets/f2f489d8-ef21-4181-a2ef-df345ac75b0f" />
-<img width="1920" height="888" alt="Screenshot (2779)" src="https://github.com/user-attachments/assets/fff77032-0b1d-405f-b7cc-90b4e3c16326" />
-<img width="1920" height="869" alt="Screenshot (2778)" src="https://github.com/user-attachments/assets/d20d7157-9ee3-4fa0-a73e-4ec1a93d74e3" />
-<img width="1920" height="890" alt="Screenshot (2796)" src="https://github.com/user-attachments/assets/a1945e4e-1cf8-4786-8bd8-5495e386cb06" />
 # ClaimJudge – AI-Powered Decentralized Claim & Dispute Resolver
 
 **Final version – Fully compliant with steward feedback**
@@ -14,14 +5,10 @@
 ## Overview
 
 ClaimJudge is an intelligent contract on GenLayer that enables anyone to create claims, submit evidence, receive an AI judgment, challenge the decision, and request a full reassessment.
-## contract address:0x8A8B387C84552863c077C3085dF719E6DA42d673
-http://explorer-studio.genlayer.com/address/0x8A8B387C84552863c077C3085dF719E6DA42d673
-https://explorer-studio.genlayer.com/tx/0x38c1fea49cb5c9aeeea1e16f7320ec65ae9d217041290d5d8d53cc76c431e14b
-https://explorer-studio.genlayer.com/tx/0xf9fab74f4827f03bfc4c891d85b89141212ede63e51d535dcb5b6164ac0bfe13
-https://explorer-studio.genlayer.com/tx/0xf830d907987c58994814400366ae9655e6f415a5f5aebafa0c32fd5222c77816
+## contract address:0xe8e1eBf97070F7d4Ccbe2a87B55Cf4bA04f0434F
+https://explorer-studio.genlayer.com/address/0xe8e1eBf97070F7d4Ccbe2a87B55Cf4bA04f0434F
 
 ## live demo 
-https://jade-lamington-f9b630.netlify.app/
 
 
 ## Steward Feedback Compliance
