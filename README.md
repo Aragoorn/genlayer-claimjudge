@@ -66,4 +66,4 @@ Resolve it again (reassessment)
 Check get_history and get_resolution
 
 Repository:
-https://github.com/Aragoorn/genlayer-claimjudge
+https://github.com/Aragoorn/claimjudge
